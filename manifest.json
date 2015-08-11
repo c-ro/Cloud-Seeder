@@ -18,8 +18,5 @@
 	"scripts": ["jquery-2.1.4.min.js","background.js", "content.js"]
 	},
 
-	"permissions": [
-	"storage",
-    "tabs"
-  	]
+	"permissions": ["storage", "tabs"]
 }
