@@ -20,12 +20,23 @@ $(document).ready(function() {
 		renderButtons();
 	}
 
+	function downloadAll(){
+		$(dlLabels).each(function(){
+			this.click();
+		});
+	}
+
 	function renderButtons(){
-		
+
 		$('#cs-downloads').empty();
+
+		$('#cs-downloads').prepend("<div class='button' id='download-all'>Download All</div>");
+		$('#download-all').on('click', function(){
+			downloadAll();
+		});
 		
 		$(dlLabels).each(function(index){
-			var download = $("#cs-downloads").prepend("<div class='button' id='btn" + index +"'></div>");
+			var download = $("#cs-downloads").append("<div class='button' id='btn" + index +"'></div>");
 			var id = "#btn" + index;
 			var button = $(id);
 
