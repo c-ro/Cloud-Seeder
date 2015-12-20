@@ -1,5 +1,25 @@
-#dlNotice {
+#cs-downloads {
+	border: 5px solid black;
+	position: fixed;
+	top: 47px;
+	right: 1px;
+	z-index: 1000;
 	color: white;
-	height: 150px;
-	background-color: #ff3a00;
+	display: inline-block;
+	text-align: left;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+	color: white;
+	padding: 5px;
+	margin: 3px;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3a00+0,ff6d44+50,ff3a00+100 */
+	background: #ff3a00; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff3a00 0%, #ff6d44 50%, #ff3a00 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ff3a00 0%,#ff6d44 50%,#ff3a00 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ff3a00 0%,#ff6d44 50%,#ff3a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3a00', endColorstr='#ff3a00',GradientType=0 ); /* IE6-9 */
+
 }

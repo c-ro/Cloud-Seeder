@@ -3,7 +3,7 @@ var activeTab;
 // DISPLAY PAGE ACTION ICON
 function showPageAction( tabId, changeInfo, tab ) {
     chrome.pageAction.show(tabId);
-};
+}
 
 chrome.tabs.onUpdated.addListener(showPageAction);
 
@@ -13,14 +13,19 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 });
 
 // SET ONCLICK ACTION(S)
+var scOpen = false;
+
 chrome.pageAction.onClicked.addListener(function(tab) {
   
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      activeTab = tabs[0].id;
-    });
+	if(scOpen){
+		scOpen = false;
+	} else {
+		scOpen = true;
+	}
 
-    chrome.tabs.sendMessage(activeTab, {"message": "clicked_page_action"});
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+		activeTab = tabs[0].id;
+	});
 
-  console.log("Sent Message from Bg.js");
-
+    chrome.tabs.sendMessage(activeTab, {"message": scOpen});
 });
