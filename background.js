@@ -2,7 +2,9 @@ var activeTab;
 
 // DISPLAY PAGE ACTION ICON
 function showPageAction( tabId, changeInfo, tab ) {
-    chrome.pageAction.show(tabId);
+	if(tab.url.indexOf("https://soundcloud.com") >= 0){
+		chrome.pageAction.show(tabId);
+	}
 }
 
 chrome.tabs.onUpdated.addListener(showPageAction);
