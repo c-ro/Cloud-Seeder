@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 		$('#cs-downloads').empty();
 
-		$('#cs-downloads').prepend("<div class='button' id='download-all'>Download All</div>");
+		$('#cs-downloads').prepend("<div id='download-all' class='button'>Download All</div>");
 		$('#download-all').on('click', function(){
 			downloadAll();
 		});
